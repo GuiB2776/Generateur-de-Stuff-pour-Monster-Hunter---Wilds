@@ -1,0 +1,56 @@
+🎨 Charte graphique proposée (style Monster Hunter épique)
+
+Élément	                         Valeur
+
+Couleur primaire	            #7A4419 (brun chasseur, cuir)
+Couleur secondaire	            #2F1E13 (brun foncé, contraste fort)
+Fond général	                #F8F1E5 (beige parchemin)
+Typo principale	'Cinzel', serif (style ancien épique)
+Accent couleurs	            #B9925E (or doux pour titres/boutons)
+
+
+
+
+
+Voici tes nouvelles instructions d'améliorations et modifications à apporter, fais moi un dossier .zip avec toutes les modifications et améliorations : 
+1. Il faut que les composants nécessaires s'affichent en-dessous des équipements sélectionnés et des statistiques cumulées.
+2. Il faut que la const armorData soit seulement présente dans le fichier armors.js et que les différentes fonctionnalités aillent chercher les données dans ce fichier.
+3. Il faut que dans la const armorData il y ait aussi les composants nécessaires pour craft ces équipements. Ils s'afficheront dans la section : Composants nécessaires. 
+4. Il faut que dans la const armorDate il y ait aussi les joyaux présents sur les équipements. Ils seront affichés dans une nouvelle section : Joyaux.
+5. Exemple d'un set d'armure en utilisant celui "Espoir" dans la const armorData. 
+    Il y a donc dedans et à utiliser : 
+        - le chemin relatif vers l'image d'illustration de l'armure
+        - les parties et leurs statistiques
+        - les composants avec leurs nombres et les liens vers le site officiel
+        - les emplacements pour des joyaux avec les joyaux, leurs effets et les liens vers le site officiel
+    Exemple : 
+
+const armorData = {
+  "Espoir": {
+    image: "images/armures/espoir.png",
+    parts: {
+      "Tête":     { defense: 2, feu: 1, eau: 0, foudre: 1, glace: 0, dragon: 0 },
+      "Plastron": { defense: 2, feu: 1, eau: 0, foudre: 1, glace: 0, dragon: 0 },
+      "Gants":    { defense: 2, feu: 1, eau: 0, foudre: 1, glace: 0, dragon: 0 },
+      "Tassette": { defense: 2, feu: 1, eau: 0, foudre: 1, glace: 0, dragon: 0 },
+      "Grèves":   { defense: 2, feu: 1, eau: 0, foudre: 1, glace: 0, dragon: 0 }
+    },
+    components: {
+      "Écaille d'Herbiore": { nombre: 2, lien: "https://monsterhunter.com/composant/herbiore" },
+      "Plume de Florest":   { nombre: 1, lien: "https://monsterhunter.com/composant/florest" },
+      "Os Brut":            { nombre: 3, lien: "https://monsterhunter.com/composant/os-brut" }
+    },
+    slots: {
+      "Joyau Attaque": { effet: "Augmente l'attaque", lien: "https://monsterhunter.com/joyau/attaque" },
+      "Joyau Feu":     { effet: "Résistance au feu", lien: "https://monsterhunter.com/joyau/feu" }
+    }
+  },
+};
+
+
+
+
+
+0. Il faut que lorsque l'on recherche avec la search-bar.js, le container sélectionné par la recherche s'affiche en surbrillance tant que l'utilisateur n'a pas cliqué à côté ou dessus.
+5. Il faut que l'exportation de build créé un fichier.JSON comme il fait déjà et un fichier.txt que le joueur pourra utiliser pour avoir les informations sur son ordinateur.
+6. 

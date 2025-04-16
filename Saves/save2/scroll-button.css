@@ -1,0 +1,21 @@
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7A4419;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #B9925E;
+}

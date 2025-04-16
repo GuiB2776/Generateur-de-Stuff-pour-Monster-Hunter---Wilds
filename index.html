@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+      <meta charset="UTF-8">
+      <title>Générateur d'Armures - Monster Hunter: Wilds</title>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="search-bar.css">
+      <link rel="stylesheet" href="scroll-button.css">
+      <link rel="stylesheet" href="scroll-button.css">
+  </head>
+
+
+  <body>
+
+    <header>
+      <h1>Générateur d'Armures</h1>
+      <h2>Monster Hunter: Wilds</h2>
+    </header>
+
+    <main>
+
+      <section id="search-bar">
+        <input type="text" id="searchInput" placeholder="Rechercher un set d'armure..." />
+        <button onclick="searchSet()">Rechercher</button>
+      </section>
+  
+      <section id="selected-summary">
+        <div id="selected-gear">
+          <h2>Équipement sélectionné</h2>
+          <div class="gear-parts"></div>
+        </div>
+        <div id="totals">
+          <h2>Statistiques cumulées</h2>
+          <p class="totals-stats">Sélectionne des pièces pour voir les stats...</p>
+        </div>
+      </section>
+  
+      <section id="components" style="padding: 20px;">
+        <h2>Composants nécessaires</h2>
+        <div id="components-display"></div>
+        <button id="componentsBtn" onclick="displayComponents()">Afficher les composants</button>
+      </section>
+
+      <!--
+      <section id="damageSimulation" style="padding: 20px;">
+        <h2>Simulation de Dégâts</h2>
+        <select id="element-choice" onchange="simulateDamage(this.value)">
+          <option value="feu">Feu</option>
+          <option value="eau">Eau</option>
+          <option value="foudre">Foudre</option>
+          <option value="glace">Glace</option>
+          <option value="dragon">Dragon</option>
+        </select>
+        <p id="damage-result">Sélectionne un élément pour estimer les dégâts.</p>
+      </section>
+      -->
+
+      <section id="sets-container"></section>
+
+      <button id="scrollToTopBtn" title="Retour en haut">↑ Haut</button>
+      <script src="scroll-button.js"></script>
+
+      <div class="separateur"></div>
+
+      <section style="padding: 20px; text-align: center;">
+        <h2>Gérer le Build</h2>
+        <button onclick="saveBuild()">💾 Exporter le Build</button>
+        <input type="file" onchange="loadBuildFromFile(this.files[0])">
+      </section>
+      <br><br>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="scroll-button.js"></script>
+    <script src="search-bar.js"></script>
+    <script src="armors.js"></script>
+    <script src="build-storage.js"></script>
+    <script src="components.js"></script>
+    <script src="damage-simulator.js"></script>
+
+  </body>
+
+
+</html>

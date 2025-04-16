@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur d'Armures - Monster Hunter: Wilds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <!-- FICHIERS CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scroll-button.css">
+</head>
+<body>
+  <header>
+    <h1>Générateur d'Armures</h1>
+    <p>Monster Hunter: Wilds</p>
+  </header>
+
+  <section id="search-bar">
+    <input type="text" id="searchInput" placeholder="Rechercher un set d'armure..." />
+    <button onclick="searchSet()">Rechercher</button>
+  </section>
+
+  <section id="selected-summary">
+    <div id="selected-gear">
+      <h2>Équipement sélectionné</h2>
+      <div class="gear-parts"></div>
+    </div>
+    <div id="totals">
+      <h2>Statistiques cumulées</h2>
+      <p class="totals-stats">Sélectionne des pièces pour voir les stats...</p>
+    </div>
+  </section>
+
+  <main id="sets-container"></main>
+
+  <button id="scrollToTopBtn" title="Retour en haut">↑ Haut</button>
+
+  <script src="script.js"></script>
+  <script src="search-bar.js"></script>
+  <script src="armors.js"></script>
+  <script src="scroll-button.js"></script>
+
+</body>
+</html>
